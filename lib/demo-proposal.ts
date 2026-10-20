@@ -1,0 +1,5 @@
+import type { TripRequest } from './trip-schema';
+export function makeDemoProposal(t: TripRequest) {
+  const dates = t.startDate && t.endDate ? `${t.startDate} – ${t.endDate}` : 'date da definire';
+  return `PROPOSTA PRELIMINARE — MODALITÀ DEMO\n\nDestinazione: ${t.destination}\nDate: ${dates}\nViaggiatori: ${t.travelers}\nBudget indicato: ${t.budget || 'da definire'}\nStile: ${t.travelStyle}\n\nDirezione di viaggio\nCostruire un itinerario su misura a ${t.destination}, bilanciando tempi di trasferimento, esperienze e momenti liberi. La selezione concreta di hotel, trasporti e attività dovrà essere verificata con fornitori reali dopo aver confermato le date e le preferenze.\n\nProssimi passi\n1. Confermare date, aeroporto/città di partenza e flessibilità.\n2. Definire categoria di alloggio, ritmo e attività prioritarie.\n3. Verificare disponibilità, prezzi, tasse e condizioni con i fornitori.\n4. Preparare un preventivo verificato prima di qualunque impegno.\n\nSTATO: nessuna ricerca live eseguita; nessun prezzo verificato; nessun servizio prenotato. Questa risposta è una dimostrazione del flusso e non un'offerta commerciale.`;
+}
